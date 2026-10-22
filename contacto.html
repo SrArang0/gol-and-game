@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!-- idioma de la pagina en español -->
+<html lang="es">
+
+<head>
+  <!-- letras con tildes y ñ -->
+  <meta charset="UTF-8">
+  <!-- para que se vea bien en el celular -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- datos para los buscadores -->
+  <meta name="description" content="Formulario de contacto de Gol & Game">
+  <meta name="keywords" content="contacto, formulario, fútbol, esports">
+  <meta name="author" content="Cristian">
+  <!-- datos para cuando se comparte el link -->
+  <meta property="og:title" content="Contacto - Gol & Game">
+  <meta property="og:description" content="Escríbenos para hablar de fútbol y deportes electrónicos">
+  <title>Contacto - Gol & Game</title>
+
+  <!-- estilos del bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- estilos de la pagina -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- encabezado con el menu -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-gg" aria-label="Navegación principal">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Gol &amp; Game</a>
+        <!-- boton de las tres rayitas para el celular -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+          aria-controls="menu" aria-expanded="false" aria-label="Mostrar menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- links del menu -->
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="informacion.html">Información</a></li>
+            <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
+            <li class="nav-item"><a class="nav-link" href="tabla.html">Tabla</a></li>
+            <li class="nav-item"><a class="nav-link active" href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- contenido principal -->
+  <main>
+    <!-- banner de la pagina -->
+    <section class="banner-pagina banner-contacto">
+      <h1>Contacto</h1>
+      <p>¿Tienes una pregunta o una idea? Escríbenos</p>
+    </section>
+
+    <!-- caja que centra el contenido -->
+    <div class="container my-4">
+
+      <!-- seccion del formulario -->
+      <section>
+        <h2>Déjanos tu mensaje</h2>
+        <article>
+          <h3>Formulario de contacto</h3>
+          <p>Llena el formulario y te responderemos pronto.</p>
+
+          <!-- mensaje de exito, empieza escondido con d-none -->
+          <div id="mensaje-exito" class="alert alert-success d-none">
+            ¡Mensaje enviado con éxito! Gracias por escribirnos.
+          </div>
+
+          <!-- novalidate: hace que los errores salgan en la pagina y no en burbujas del navegador -->
+          <form id="formulario" novalidate>
+
+            <!-- campo nombre -->
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input type="text" id="nombre" class="form-control" required>
+              <!-- aqui el script en java escribe el error -->
+              <div id="error-nombre" class="invalid-feedback"></div>
+            </div>
+
+            <!-- campo correo -->
+            <div class="mb-3">
+              <label for="correo" class="form-label">Correo electrónico</label>
+              <input type="email" id="correo" class="form-control" required>
+              <div id="error-correo" class="invalid-feedback"></div>
+            </div>
+
+            <!-- campo select -->
+            <div class="mb-3">
+              <label for="asunto" class="form-label">Tema</label>
+              <select id="asunto" class="form-select" required>
+                <option value="">Elige un tema</option>
+                <option value="futbol">Fútbol</option>
+                <option value="esports">Deportes electrónicos</option>
+                <option value="otro">Otro</option>
+              </select>
+              <div id="error-asunto" class="invalid-feedback"></div>
+            </div>
+
+            <!-- campo mensaje -->
+            <div class="mb-3">
+              <label for="mensaje" class="form-label">Mensaje</label>
+              <textarea id="mensaje" class="form-control" rows="4" required></textarea>
+              <div id="error-mensaje" class="invalid-feedback"></div>
+            </div>
+
+            <!-- campo checkbox -->
+            <div class="mb-3 form-check">
+              <input type="checkbox" id="acepto" class="form-check-input" required>
+              <label for="acepto" class="form-check-label">
+                Acepto que Gol &amp; Game use mis datos para responderme
+              </label>
+              <div id="error-acepto" class="invalid-feedback"></div>
+            </div>
+
+            <!-- boton de enviar -->
+            <button type="submit" class="btn btn-success">Enviar</button>
+          </form>
+        </article>
+      </section>
+
+      <!-- contenido aparte, aviso -->
+      <aside>
+        <h2>Ten en cuenta</h2>
+        <p>Todos los campos son obligatorios. Los datos de este formulario son de ejemplo y no se guardan.</p>
+      </aside>
+    </div>
+  </main>
+
+  <!-- pie de pagina -->
+  <footer>
+    <p>&copy; 2026 Gol &amp; Game - Cristhian Arango</p>
+  </footer>
+
+  <!-- script de bootstrap para que funcione el menu -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- mi script en java -->
+  <script src="js/script.js"></script>
+</body>
+
+</html>

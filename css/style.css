@@ -1,0 +1,155 @@
+/* variables de colores y letra */
+:root {
+  --color-verde: #1b8a3d;
+  --color-verde-texto: #14702f;
+  --color-morado: #6a1b9a;
+  --color-oscuro: #1c1c1e;
+  --color-claro: #f4f4f4;
+  --fuente: Arial, sans-serif;
+}
+
+/* estilo general de toda la pagina */
+body {
+  font-family: var(--fuente);
+  background-color: var(--color-claro);
+  /* hace que el pie de pagina quede abajo aunque haya poco contenido */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* el contenido principal ocupa el espacio que sobre */
+main {
+  flex: 1;
+}
+
+/* barra de arriba */
+.navbar-gg {
+  background-color: var(--color-oscuro);
+}
+
+/* nombre del portal en la barra */
+.navbar-gg .navbar-brand {
+  color: var(--color-verde);
+  font-weight: bold;
+}
+
+/* banner del inicio con flexbox */
+.hero {
+  background: linear-gradient(135deg, var(--color-verde-texto), var(--color-morado));
+  color: white;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+/* el titulo del banner se queda blanco */
+.hero h1 {
+  color: white;
+}
+
+/* titulos principales en morado */
+h1,
+h2 {
+  color: var(--color-morado);
+}
+
+/* subtitulos en verde */
+h3 {
+  color: var(--color-verde-texto);
+}
+
+/* titulos de las cards en morado */
+.card-title {
+  color: var(--color-morado);
+}
+
+/* palabras en negrilla de las listas en verde */
+strong {
+  color: var(--color-verde-texto);
+}
+
+/* fotos de la galeria del mismo tamano y sin recortar */
+.galeria img {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+  background-color: var(--color-oscuro);
+}
+
+/* texto debajo de cada foto */
+figcaption {
+  font-size: 1rem;
+  color: var(--color-oscuro);
+  text-align: center;
+}
+
+
+/* encabezado verde de la tabla */
+.tabla-gg thead th {
+  background-color: var(--color-verde);
+  color: white;
+}
+
+/* pie de la tabla en negrita */
+.tabla-gg tfoot td {
+  font-weight: bold;
+  background-color: var(--color-claro);
+}
+
+/* pie de pagina */
+footer {
+  background-color: var(--color-oscuro);
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* banner de arriba de las demas paginas */
+.banner-pagina {
+  color: white;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+/* el titulo del banner va en blanco */
+.banner-pagina h1 {
+  color: white;
+}
+
+/* frase corta debajo del titulo */
+.banner-pagina p {
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
+
+/* un color distinto para cada pagina */
+.banner-informacion {
+  background: linear-gradient(135deg, var(--color-verde-texto), var(--color-oscuro));
+}
+
+.banner-galeria {
+  background: linear-gradient(135deg, var(--color-morado), var(--color-oscuro));
+}
+
+.banner-tabla {
+  background: linear-gradient(135deg, var(--color-verde-texto), var(--color-morado));
+}
+
+.banner-contacto {
+  background: linear-gradient(135deg, var(--color-morado), var(--color-verde-texto));
+}
+
+/* titulo de seccion */
+h2 {
+  font-size: 1.6rem;
+}
+
+/* subtitulo mas pequeno que el titulo */
+h3 {
+  font-size: 1.2rem;
+}
